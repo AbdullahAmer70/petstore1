@@ -21,3 +21,27 @@ divide() {
         echo "Result of division: $result"
     fi
 }
+
+main() {
+    echo "Welcome to the Git Bash Calculator!"
+    echo "Please select an operation:"
+    echo "1. Addition"
+    echo "2. Subtraction"
+    echo "3. Multiplication"
+    echo "4. Division"
+    read -p "Enter your choice (1/2/3/4): " choice
+
+    read -p "Enter first number: " num1
+    read -p "Enter second number: " num2
+
+    case $choice in
+        1) add $num1 $num2 ;;
+        2) subtract $num1 $num2 ;;
+        3) multiply $num1 $num2 ;;
+        4) divide $num1 $num2 ;;
+        *) echo "Invalid choice";;
+    esac
+}
+
+# Call the main function
+main
