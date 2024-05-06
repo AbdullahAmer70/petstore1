@@ -7,3 +7,9 @@ subtract() {
     result=$(echo "$1 - $2" | bc)
     echo "Result of subtraction: $result"
 }
+
+multiply() {
+    result=$(echo "$1 * $2" | bc)
+    echo "Result of multiplication: $result"
+}
+
